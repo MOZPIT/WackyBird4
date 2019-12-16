@@ -55,14 +55,12 @@ public class BackDrop {
 	public void render(Graphics g) {
 		if(backdrop != null) {
 				for(int i = 0; i < 50; i++) {
-		        	g.drawImage(backdrop, ((int) ((dx + (GameCore.WIDTH * .01)) - Camera.x/100)), -100, null);	
-				    g.drawImage(trees, ((int) ((dx + (GameCore.WIDTH * 0.6)) - Camera.x/10)), GameCore.HEIGHT-120, null);	
+		        	g.drawImage(backdrop, ((int) ((dx + (GameCore.WIDTH * .01)) - Camera.x)), -100, null);		
 				}
 		}else {
 			try {
 			    try {       
 					backdrop = ImageIO.read(new File(getClass().getResource(filename).toURI()));
-					trees = ImageIO.read(new File(getClass().getResource("images/dawntree.png").toURI()));
 				} catch (URISyntaxException e) {
 					e.printStackTrace();
 				}

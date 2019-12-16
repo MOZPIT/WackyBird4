@@ -40,6 +40,8 @@ public class GameCore extends Canvas implements Runnable {
 	public BackDrop backdrop;
 	public Score playerScore;
 	public Floor gameFloor;
+	public Trees trees;
+	public Snow snowFlake;
 	
 	//Constructor
 	public GameCore() {
@@ -55,6 +57,8 @@ public class GameCore extends Canvas implements Runnable {
 		bird = new Bird(20,GameCore.HEIGHT/2,pipe.pipes);
 		playerScore = new Score();
 		gameFloor = new Floor();
+		trees = new Trees();
+		snowFlake = new Snow(3, 1, 3);
 	}
 	
 	public synchronized void start() {		
@@ -152,6 +156,7 @@ public class GameCore extends Canvas implements Runnable {
 			backdrop.update();
 			pipe.update();
 			bird.update();
+			snowFlake.update();
 		}
 		else if(state == STATE.MENU){
 			//do somethin
@@ -175,6 +180,14 @@ public class GameCore extends Canvas implements Runnable {
 			bird.render(g);
 			playerScore.render(g);
 			gameFloor.render(g);
+			trees.render(g);
+			
+				
+			snowFlake.render(g);
+			
+//			if(score >= 4) {
+//				
+//			}
 		}else{
 			menu.render(g);
 		}
