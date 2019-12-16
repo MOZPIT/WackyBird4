@@ -34,7 +34,7 @@ public class Pipe{
 			int width = 150;
 			int height = rand.nextInt(GameCore.HEIGHT/2);
 			
-			pipes.add(new Rectangle(GameCore.WIDTH + width + pipes.size() * 500, GameCore.HEIGHT - height -10, width, height));
+			pipes.add(new Rectangle(GameCore.WIDTH + width + pipes.size() * 500, GameCore.HEIGHT - height, width, height));
 			pipes.add(new Rectangle(GameCore.WIDTH + width + (pipes.size() - 1) * 500, 0, width, GameCore.HEIGHT - height - space));
 		}
 		

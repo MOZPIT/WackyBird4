@@ -77,6 +77,7 @@ public class Bird extends Rectangle{
 			y = GameCore.HEIGHT - 20;
 		}
 		
+		birdsXVal = x;
 	}
 	
 	public void render(Graphics g) {

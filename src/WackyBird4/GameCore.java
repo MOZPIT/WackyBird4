@@ -181,13 +181,10 @@ public class GameCore extends Canvas implements Runnable {
 			playerScore.render(g);
 			gameFloor.render(g);
 			trees.render(g);
-			
-				
-			snowFlake.render(g);
-			
-//			if(score >= 4) {
-//				
-//			}
+						
+			if(score >= 4) {
+				snowFlake.render(g);
+			}
 		}else{
 			menu.render(g);
 		}
@@ -201,7 +198,7 @@ public class GameCore extends Canvas implements Runnable {
 		return gameOver = gameStatus;
 	}
 	
-	@Override
-	public void paint(Graphics g) {}
+//	@Override
+//	public void paint(Graphics g) {}
 	
 }

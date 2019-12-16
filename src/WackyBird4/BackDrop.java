@@ -13,7 +13,7 @@ public class BackDrop {
 //	private String trees;
 	
 	public BufferedImage backdrop = null;
-	public BufferedImage trees = null;
+//	public BufferedImage trees = null;
 	
 	public ImageLayer levelBackground;
 	private static int level;
@@ -54,8 +54,8 @@ public class BackDrop {
 
 	public void render(Graphics g) {
 		if(backdrop != null) {
-				for(int i = 0; i < 50; i++) {
-		        	g.drawImage(backdrop, ((int) ((dx + (GameCore.WIDTH * .01)) - Camera.x)), -100, null);		
+				for(int i = 0; i < 60; i++) {
+		        	g.drawImage(backdrop, ((int) ((dx + (GameCore.WIDTH *.01)) - Camera.x)), -100, null);		
 				}
 		}else {
 			try {

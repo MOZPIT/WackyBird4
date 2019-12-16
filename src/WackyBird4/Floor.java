@@ -17,6 +17,6 @@ public class Floor {
 			Floor = Color.white;
 		}
 		g.setColor(Floor);
-		g.fillRect(0, GameCore.HEIGHT - 5, GameCore.WIDTH, 20);
+		g.fillRect(0, GameCore.HEIGHT - 2, GameCore.WIDTH, 20);
 	}
 }
